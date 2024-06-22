@@ -57,12 +57,12 @@
     z-index: 0;
 }
 #team1Score{
-    width: 35%;
+    width: 40%;
     height: 100%;
     z-index: 1;
 }
 #team1short{
-    width: 65%;
+    width: 60%;
     height: 100%;
     z-index: 1;
 }
@@ -100,12 +100,12 @@
     z-index: 0;
 }
 #team2Score{
-    width: 35%;
+    width: 40%;
     height: 100%;
     z-index: 1;
 }
 #team2short{
-    width: 65%;
+    width: 60%;
     height: 100%;
     z-index: 1;
 }
@@ -148,5 +148,5 @@
     top: 135px;
     left: 178px;
     z-index: 0;
-
+    visibility: hidden;
 }

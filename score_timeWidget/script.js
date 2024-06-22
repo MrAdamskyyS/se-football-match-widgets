@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetBtn = document.getElementById('rha1');
     const addtimeBtn = document.getElementById('adt');
     const resetaddTimeBtn = document.getElementById('radt');
+    const addGoalTeam1Btn = document.getElementById('gt1');
 
     function updateTimerDisplay() {
         let minutesStr = minutes < 10 ? `0${minutes}` : minutes;
@@ -57,10 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    function addGoalTeam1(){
+        tempscore = parseInt(document.getElementById("team1Score").textContent);
+        console.log(tempscore);
+        tempscore += 1;
+        console.log(tempscore);
+        document.getElementById("team1Score").innerHTML = tempscore.toString();
+    }
+
     startBtn.addEventListener('click', startTimer);
     resetBtn.addEventListener('click', resetTimer);
     addtimeBtn.addEventListener('click', addTime);
     resetaddTimeBtn.addEventListener('click', resetaddTime);
+    addGoalTeam1Btn.addEventListener('click', addGoalTeam1);
 
     updateTimerDisplay(); // Initialize the display
 });
