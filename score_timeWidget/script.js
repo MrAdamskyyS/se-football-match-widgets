@@ -1,4 +1,5 @@
 let maxMinutes = 1;
+let timetoAdd;
 
 document.addEventListener('DOMContentLoaded', () => {
     let minutes = 0;
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.getElementById('ha1');
     const resetBtn = document.getElementById('rha1');
     const addtimeBtn = document.getElementById('adt');
+    const resetaddTimeBtn = document.getElementById('radt');
 
     function updateTimerDisplay() {
         let minutesStr = minutes < 10 ? `0${minutes}` : minutes;
@@ -41,16 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function addTime(){
-        timetoAdd = document.getElementById("tam");
-        maxMinutes += parseInt(timetoAdd.value);
-        document.getElementById("maddtime").innerHTML = "+" + timetoAdd.value.toString();
+        timetoAdd = parseInt(document.getElementById("tam").value);
+        maxMinutes += timetoAdd;
+        document.getElementById("maddtime").innerHTML = "+" + document.getElementById("tam").value.toString();
         document.getElementById("addtime").style.visibility="visible";
         console.log(maxMinutes);
+    }
+
+    function resetaddTime(){
+        maxMinutes -= timetoAdd;
+        console.log(maxMinutes);
+        document.getElementById("addtime").style.visibility="hidden";
+
     }
 
     startBtn.addEventListener('click', startTimer);
     resetBtn.addEventListener('click', resetTimer);
     addtimeBtn.addEventListener('click', addTime);
+    resetaddTimeBtn.addEventListener('click', resetaddTime);
 
     updateTimerDisplay(); // Initialize the display
 });
