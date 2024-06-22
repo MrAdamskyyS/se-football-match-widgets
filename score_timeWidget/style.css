@@ -69,7 +69,7 @@
     height: 100%;
     background-color: lightgray;
 }
-.container .addtime{
+.container #addtime{
     width: 11%;
     height: 100%;
     background-color: darkblue;
